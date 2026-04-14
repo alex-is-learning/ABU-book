@@ -9,8 +9,33 @@ function removeExistingIframe() {
   if (existing) existing.remove();
 }
 
+export function buildSidebar(sections, orderedIds) {
+  const nav = document.getElementById('sidebar-nav');
+  if (!nav) return;
+  nav.innerHTML = '';
+  orderedIds.forEach(id => {
+    const section = sections[id];
+    if (!section) return;
+    const a = document.createElement('a');
+    a.href = '#';
+    a.textContent = section.title;
+    a.dataset.sectionId = id;
+    a.className = 'sidebar-link';
+    nav.appendChild(a);
+  });
+}
+
+export function updateSidebarActive(id) {
+  // For simpler variants (e.g. s01-s), highlight the parent (s01)
+  const baseId = id.replace(/-s$/, '');
+  document.querySelectorAll('.sidebar-link').forEach(a => {
+    a.classList.toggle('sidebar-link--active', a.dataset.sectionId === baseId);
+  });
+}
+
 export function renderSection(section, html) {
   const area = getContentArea();
+  updateSidebarActive(section.id);
 
   // Remove any existing iframe before building new content
   removeExistingIframe();

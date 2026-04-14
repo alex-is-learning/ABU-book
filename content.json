@@ -13,7 +13,7 @@
     },
     "s01-s": {
       "id": "s01-s",
-      "title": "A — Simpler",
+      "title": "What is A? — Simpler",
       "file": "sections/s01-s.md",
       "gif": null,
       "gifCaption": null,
@@ -23,13 +23,113 @@
     },
     "s02": {
       "id": "s02",
-      "title": "Content frontier",
+      "title": "What is B?",
       "file": "sections/s02.md",
+      "gif": "gifs/A-to-B.html",
+      "gifCaption": "A belief at the frontier crystallises and drifts inward to become part of the stable core.",
+      "ab": "s03",
+      "u": "s02-s",
+      "stub": false
+    },
+    "s02-s": {
+      "id": "s02-s",
+      "title": "What is B? — Simpler",
+      "file": "sections/s02-s.md",
+      "gif": null,
+      "gifCaption": null,
+      "ab": "s03",
+      "u": null,
+      "stub": false
+    },
+    "s03": {
+      "id": "s03",
+      "title": "What is U?",
+      "file": "sections/s03.md",
+      "gif": "gifs/U-book-and-person.html",
+      "gifCaption": "Two external inputs approach the belief network — one from a book, one from a person.",
+      "ab": "s04",
+      "u": "s03-s",
+      "stub": false
+    },
+    "s03-s": {
+      "id": "s03-s",
+      "title": "What is U? — Simpler",
+      "file": "sections/s03-s.md",
+      "gif": null,
+      "gifCaption": null,
+      "ab": "s04",
+      "u": null,
+      "stub": false
+    },
+    "s04": {
+      "id": "s04",
+      "title": "When U becomes A",
+      "file": "sections/s04.md",
+      "gif": "gifs/U-to-A.html",
+      "gifCaption": "An external input binds to the belief network and becomes a new active belief.",
+      "ab": "s05",
+      "u": "s04-s",
+      "stub": false
+    },
+    "s04-s": {
+      "id": "s04-s",
+      "title": "When U becomes A — Simpler",
+      "file": "sections/s04-s.md",
+      "gif": null,
+      "gifCaption": null,
+      "ab": "s05",
+      "u": null,
+      "stub": false
+    },
+    "s05": {
+      "id": "s05",
+      "title": "When U is rejected",
+      "file": "sections/s05.md",
+      "gif": "gifs/U-rejected.html",
+      "gifCaption": "An external input approaches, fails to bind, and slowly fades away.",
+      "ab": "s06",
+      "u": "s05-s",
+      "stub": false
+    },
+    "s05-s": {
+      "id": "s05-s",
+      "title": "When U is rejected — Simpler",
+      "file": "sections/s05-s.md",
+      "gif": null,
+      "gifCaption": null,
+      "ab": "s06",
+      "u": null,
+      "stub": false
+    },
+    "s06": {
+      "id": "s06",
+      "title": "Maladaptive B",
+      "file": "sections/s06.md",
+      "gif": "gifs/mal1-maladaptive-b-fires.html",
+      "gifCaption": "A maladaptive core belief fires and blocks incoming input from landing.",
+      "ab": null,
+      "u": "s06-s",
+      "stub": false
+    },
+    "s06-s": {
+      "id": "s06-s",
+      "title": "Maladaptive B — Simpler",
+      "file": "sections/s06-s.md",
       "gif": null,
       "gifCaption": null,
       "ab": null,
       "u": null,
-      "stub": true
+      "stub": false
+    },
+    "to-process": {
+      "id": "to-process",
+      "title": "Raw Notes (To Process)",
+      "file": "sections/to-process.md",
+      "gif": null,
+      "gifCaption": null,
+      "ab": null,
+      "u": null,
+      "stub": false
     }
   }
 }

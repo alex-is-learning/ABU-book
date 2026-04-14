@@ -1,5 +1,6 @@
 // app.js — bootstrap and event delegation
 import * as router from './router.js';
+import * as renderer from './renderer.js';
 import { getState, setState } from './state.js';
 
 async function boot() {
@@ -15,6 +16,22 @@ async function boot() {
   const startId = content.start;
   const savedId = getState()?.currentSection ?? null;
 
+  // Build sidebar: follow ab chain from start to get ordered main sections
+  const orderedIds = [];
+  let cur = startId;
+  while (cur) {
+    orderedIds.push(cur);
+    cur = content.sections[cur]?.ab ?? null;
+  }
+  // Append any sections not in the chain and not simpler variants
+  const chainSet = new Set(orderedIds);
+  Object.keys(content.sections).forEach(id => {
+    if (!id.endsWith('-s') && !chainSet.has(id)) {
+      orderedIds.push(id);
+    }
+  });
+  renderer.buildSidebar(content.sections, orderedIds);
+
   // Reset visitedStack to empty on fresh boot so Back is disabled initially.
   // If there is a saved currentSection we restore it but don't reconstruct history.
   const initialId = savedId ?? startId;
@@ -23,6 +40,13 @@ async function boot() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('sidebar-nav').addEventListener('click', async (e) => {
+    const a = e.target.closest('a[data-section-id]');
+    if (!a) return;
+    e.preventDefault();
+    await router.navigate(a.dataset.sectionId);
+  });
+
   const navControls = document.getElementById('nav-controls');
 
   navControls.addEventListener('click', async (event) => {
@@ -38,10 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     switch (btn.id) {
       case 'btn-a':
       case 'btn-b': {
-        if (!section || section.stub) {
-          // Stub section: show stub message, no navigation
-          const { showStub } = await import('./renderer.js');
-          showStub();
+        if (!section || section.stub || !section.ab) {
+          renderer.showStub();
           return;
         }
         const label = btn.id === 'btn-a' ? 'A' : 'B';
@@ -52,8 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       case 'btn-u': {
         if (!section || section.stub) {
-          const { showStub } = await import('./renderer.js');
-          showStub();
+          renderer.showStub();
           return;
         }
         await router.navigateU();

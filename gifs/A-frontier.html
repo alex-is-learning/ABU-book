@@ -11,7 +11,7 @@
       position: fixed;
       top: 16px;
       right: 16px;
-      display: flex;
+      display: none;
       flex-direction: column;
       gap: 8px;
       align-items: flex-end;
@@ -40,8 +40,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"
           onerror="document.getElementById('error').textContent='Failed to load Three.js'; document.getElementById('error').style.display='block'"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.js"
-          onerror="document.getElementById('error').textContent='Failed to load gif.js'; document.getElementById('error').style.display='block'"></script>
 
   <script>
     // ─── Constants ────────────────────────────────────────────────────────────
@@ -288,8 +286,7 @@
             animating = false;
             if (!gifCapturing) {
               exportBtn.disabled = false;
-              setStatus('Done — audit log downloading…');
-              downloadAuditLog();
+              setStatus('Done.');
             }
             resolve();
             return;

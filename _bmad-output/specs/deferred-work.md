@@ -2,22 +2,23 @@
 
 ## Story B — Full Content Graph
 
-**Deferred from:** spec-abu-book-mvp-infra.md (Story A)
-**Dependency:** Story A must be merged first (content.json schema is established there)
+**Status: done**
 
-**Scope:**
-- Expand `content.json` from 3-section test graph to 6 main sections (s01–s06) + 6 scaffold sections (s01-s–s06-s) + proper GIF assignments and gifCaptions
-- Create `sections/s01.md` through `sections/s06.md` — placeholder markdown (H1 + one paragraph per section describing intended content)
-- Create `sections/s01-s.md` through `sections/s06-s.md` — scaffold placeholders
+**Completed:** 2026-04-14
 
-**Note:** The actual book prose (replacing placeholders) is author work — not an agent task.
+**What was done:**
+- Expanded `content.json` to 6 main sections (s01–s06) + 6 scaffold sections (s01-s–s06-s) with GIF assignments and gifCaptions
+- Created `sections/s02.md` through `sections/s06.md` — placeholder markdown
+- Created `sections/s02-s.md` through `sections/s06-s.md` — scaffold placeholders
+- Fixed double-click race condition: navigation lock (`let navigating = false`) added to `router.js`; all three exported navigation functions (`navigate`, `navigateU`, `back`) acquire the lock before executing
+- Fixed `ab: null` history corruption: `app.js` now guards A/B clicks with `!section.ab` before writing history or calling navigate
+
+**Remaining author work:** Replace placeholder prose in `sections/s01.md` through `sections/s06.md` and their scaffold counterparts with actual book content.
 
 ---
 
-## Deferred review findings (from spec-abu-book-mvp-infra review)
+## Deferred review findings (resolved)
 
-**1. Double-click race condition**
-Concurrent `navigate()` calls (rapid button presses) can interleave `visitedStack` writes and produce duplicate or stale entries. Fix: add an in-flight navigation lock (`let navigating = false`) that drops clicks while a navigation is in progress.
+**1. Double-click race condition** — FIXED in `router.js`
 
-**2. Non-stub `ab: null` history corruption**
-If a non-stub section has `ab: null` and user clicks A/B, `app.js` writes the history label before calling `navigate(null)`, which errors. The label is written for a section that was never advanced from. Fix when expanding content.json in Story B: ensure all non-stub sections with `ab: null` are also marked `stub: true` (or add an explicit end-of-path section), OR guard `navigate(section.ab)` with a null check in `app.js`.
+**2. Non-stub `ab: null` history corruption** — FIXED in `app.js`
