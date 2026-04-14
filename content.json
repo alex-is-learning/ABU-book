@@ -1,22 +1,32 @@
 {
-  "start": "what-is-a",
+  "start": "intro",
   "sections": {
+    "intro": {
+      "id": "intro",
+      "title": "Intro — Why care?",
+      "file": "sections/01. Intro/01 - Intro - why care.md",
+      "gif": null,
+      "gifCaption": null,
+      "ab": "the-axioms",
+      "u": null,
+      "stub": false
+    },
+    "the-axioms": {
+      "id": "the-axioms",
+      "title": "The axioms",
+      "file": "sections/02. The axioms/02 - The axioms.md",
+      "gif": null,
+      "gifCaption": null,
+      "ab": "what-is-a",
+      "u": null,
+      "stub": false
+    },
     "what-is-a": {
       "id": "what-is-a",
       "title": "What is A?",
-      "file": "sections/what-is-a.md",
+      "file": "sections/02. The axioms/what-is-a.md",
       "gif": "gifs/A-frontier.html",
       "gifCaption": "Nodes growing at the frontier of a belief network.",
-      "ab": "what-is-b",
-      "u": "what-is-a-simpler",
-      "stub": false
-    },
-    "what-is-a-simpler": {
-      "id": "what-is-a-simpler",
-      "title": "What is A? — Simpler",
-      "file": "sections/what-is-a-simpler.md",
-      "gif": null,
-      "gifCaption": null,
       "ab": "what-is-b",
       "u": null,
       "stub": false
@@ -24,19 +34,9 @@
     "what-is-b": {
       "id": "what-is-b",
       "title": "What is B?",
-      "file": "sections/what-is-b.md",
+      "file": "sections/02. The axioms/what-is-b.md",
       "gif": "gifs/A-to-B.html",
       "gifCaption": "A belief at the frontier crystallises and drifts inward to become part of the stable core.",
-      "ab": "what-is-u",
-      "u": "what-is-b-simpler",
-      "stub": false
-    },
-    "what-is-b-simpler": {
-      "id": "what-is-b-simpler",
-      "title": "What is B? — Simpler",
-      "file": "sections/what-is-b-simpler.md",
-      "gif": null,
-      "gifCaption": null,
       "ab": "what-is-u",
       "u": null,
       "stub": false
@@ -44,19 +44,9 @@
     "what-is-u": {
       "id": "what-is-u",
       "title": "What is U?",
-      "file": "sections/what-is-u.md",
+      "file": "sections/02. The axioms/what-is-u.md",
       "gif": "gifs/U-book-and-person.html",
       "gifCaption": "Two external inputs approach the belief network — one from a book, one from a person.",
-      "ab": "when-u-becomes-a",
-      "u": "what-is-u-simpler",
-      "stub": false
-    },
-    "what-is-u-simpler": {
-      "id": "what-is-u-simpler",
-      "title": "What is U? — Simpler",
-      "file": "sections/what-is-u-simpler.md",
-      "gif": null,
-      "gifCaption": null,
       "ab": "when-u-becomes-a",
       "u": null,
       "stub": false
@@ -64,19 +54,9 @@
     "when-u-becomes-a": {
       "id": "when-u-becomes-a",
       "title": "When U becomes A",
-      "file": "sections/when-u-becomes-a.md",
+      "file": "sections/02. The axioms/when-u-becomes-a.md",
       "gif": "gifs/U-to-A.html",
       "gifCaption": "An external input binds to the belief network and becomes a new active belief.",
-      "ab": "when-u-is-rejected",
-      "u": "when-u-becomes-a-simpler",
-      "stub": false
-    },
-    "when-u-becomes-a-simpler": {
-      "id": "when-u-becomes-a-simpler",
-      "title": "When U becomes A — Simpler",
-      "file": "sections/when-u-becomes-a-simpler.md",
-      "gif": null,
-      "gifCaption": null,
       "ab": "when-u-is-rejected",
       "u": null,
       "stub": false
@@ -84,19 +64,9 @@
     "when-u-is-rejected": {
       "id": "when-u-is-rejected",
       "title": "When U is rejected",
-      "file": "sections/when-u-is-rejected.md",
+      "file": "sections/02. The axioms/when-u-is-rejected.md",
       "gif": "gifs/U-rejected.html",
       "gifCaption": "An external input approaches, fails to bind, and slowly fades away.",
-      "ab": "maladaptive-b",
-      "u": "when-u-is-rejected-simpler",
-      "stub": false
-    },
-    "when-u-is-rejected-simpler": {
-      "id": "when-u-is-rejected-simpler",
-      "title": "When U is rejected — Simpler",
-      "file": "sections/when-u-is-rejected-simpler.md",
-      "gif": null,
-      "gifCaption": null,
       "ab": "maladaptive-b",
       "u": null,
       "stub": false
@@ -104,19 +74,9 @@
     "maladaptive-b": {
       "id": "maladaptive-b",
       "title": "Maladaptive B",
-      "file": "sections/maladaptive-b.md",
+      "file": "sections/03. The implications/maladaptive-b.md",
       "gif": "gifs/mal1-maladaptive-b-fires.html",
       "gifCaption": "A maladaptive core belief fires and blocks incoming input from landing.",
-      "ab": null,
-      "u": "maladaptive-b-simpler",
-      "stub": false
-    },
-    "maladaptive-b-simpler": {
-      "id": "maladaptive-b-simpler",
-      "title": "Maladaptive B — Simpler",
-      "file": "sections/maladaptive-b-simpler.md",
-      "gif": null,
-      "gifCaption": null,
       "ab": null,
       "u": null,
       "stub": false

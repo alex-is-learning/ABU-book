@@ -1,0 +1,5 @@
+- [[01 - Intro - why care]]
+- [[02 - The axioms]]
+- More detail on each
+- The implications of the axioms
+- 
