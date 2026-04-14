@@ -1,0 +1,151 @@
+/* style.css — mobile-first, WCAG AA */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #1a1a1a;
+  background: #fff;
+  line-height: 1.6;
+}
+
+header h1 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+#content-area {
+  min-height: 200px;
+}
+
+#content-area h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #111;
+}
+
+.gif-caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.gif-frame {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 4 / 3;
+  border: none;
+  margin-bottom: 1.25rem;
+  background: #f0f0f0;
+}
+
+.section-content {
+  margin-top: 0.5rem;
+}
+
+.section-content p {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.stub-message {
+  font-style: italic;
+  color: #666;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid #ccc;
+  background: #f9f9f9;
+}
+
+.error-message {
+  font-style: italic;
+  color: #666;
+  margin-top: 1rem;
+}
+
+/* Navigation controls */
+
+#nav-controls {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.abu-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+}
+
+.abu-btn:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+
+.abu-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* A — green: #2d6a2d on white = 7.6:1 ✓ */
+.btn-a {
+  background-color: #2d6a2d;
+}
+
+.btn-a:not(:disabled):hover {
+  background-color: #245424;
+}
+
+/* B — blue: #1a4a7a on white = 8.2:1 ✓ */
+.btn-b {
+  background-color: #1a4a7a;
+}
+
+.btn-b:not(:disabled):hover {
+  background-color: #133a62;
+}
+
+/* U — amber: #7a5c00 on white = 5.9:1 ✓ */
+.btn-u {
+  background-color: #7a5c00;
+}
+
+.btn-u:not(:disabled):hover {
+  background-color: #5e4700;
+}
+
+/* Back — neutral: #444 on white = 9.7:1 ✓ */
+.btn-back {
+  background-color: #444;
+}
+
+.btn-back:not(:disabled):hover {
+  background-color: #333;
+}
+
+/* Mobile: wrap buttons at ≤480px */
+@media (max-width: 480px) {
+  #nav-controls {
+    flex-wrap: wrap;
+  }
+
+  .abu-btn {
+    flex: 1 1 calc(50% - 0.25rem);
+  }
+}

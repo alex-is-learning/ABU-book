@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="A/B/U Interactive Book">
+  <meta property="og:description" content="An interactive book that adapts to what you already know.">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:type" content="website">
+  <title>A/B/U Interactive Book</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked@18/lib/marked.umd.js"></script>
+</head>
+<body>
+  <header>
+    <h1>A/B/U Interactive Book</h1>
+  </header>
+
+  <main id="content-area" aria-live="polite" aria-label="Section content">
+    <!-- Section content rendered here by renderer.js -->
+  </main>
+
+  <nav id="nav-controls" aria-label="Section navigation">
+    <button
+      id="btn-a"
+      class="abu-btn btn-a"
+      aria-label="I understood this (A)"
+    >A — Got it</button>
+    <button
+      id="btn-b"
+      class="abu-btn btn-b"
+      aria-label="I already knew this (B)"
+    >B — Knew it</button>
+    <button
+      id="btn-u"
+      class="abu-btn btn-u"
+      aria-label="This didn't land for me (U)"
+    >U — Unclear</button>
+    <button
+      id="btn-back"
+      class="abu-btn btn-back"
+      aria-label="Go back"
+      disabled
+    >Back</button>
+  </nav>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "start": "s01",
+  "sections": {
+    "s01": {
+      "id": "s01",
+      "title": "What is A?",
+      "file": "sections/s01.md",
+      "gif": "gifs/A-frontier.html",
+      "gifCaption": "Nodes growing at the frontier of a belief network.",
+      "ab": "s02",
+      "u": "s01-s",
+      "stub": false
+    },
+    "s01-s": {
+      "id": "s01-s",
+      "title": "A — Simpler",
+      "file": "sections/s01-s.md",
+      "gif": null,
+      "gifCaption": null,
+      "ab": "s02",
+      "u": null,
+      "stub": false
+    },
+    "s02": {
+      "id": "s02",
+      "title": "Content frontier",
+      "file": "sections/s02.md",
+      "gif": null,
+      "gifCaption": null,
+      "ab": null,
+      "u": null,
+      "stub": true
+    }
+  }
+}
