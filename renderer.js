@@ -26,8 +26,8 @@ export function buildSidebar(sections, orderedIds) {
 }
 
 export function updateSidebarActive(id) {
-  // For simpler variants (e.g. s01-s), highlight the parent (s01)
-  const baseId = id.replace(/-s$/, '');
+  // For simpler variants (e.g. what-is-a-simpler), highlight the parent (what-is-a)
+  const baseId = id.replace(/-simpler$/, '');
   document.querySelectorAll('.sidebar-link').forEach(a => {
     a.classList.toggle('sidebar-link--active', a.dataset.sectionId === baseId);
   });

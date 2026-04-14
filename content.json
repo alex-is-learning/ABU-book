@@ -1,120 +1,120 @@
 {
-  "start": "s01",
+  "start": "what-is-a",
   "sections": {
-    "s01": {
-      "id": "s01",
+    "what-is-a": {
+      "id": "what-is-a",
       "title": "What is A?",
-      "file": "sections/s01.md",
+      "file": "sections/what-is-a.md",
       "gif": "gifs/A-frontier.html",
       "gifCaption": "Nodes growing at the frontier of a belief network.",
-      "ab": "s02",
-      "u": "s01-s",
+      "ab": "what-is-b",
+      "u": "what-is-a-simpler",
       "stub": false
     },
-    "s01-s": {
-      "id": "s01-s",
+    "what-is-a-simpler": {
+      "id": "what-is-a-simpler",
       "title": "What is A? — Simpler",
-      "file": "sections/s01-s.md",
+      "file": "sections/what-is-a-simpler.md",
       "gif": null,
       "gifCaption": null,
-      "ab": "s02",
+      "ab": "what-is-b",
       "u": null,
       "stub": false
     },
-    "s02": {
-      "id": "s02",
+    "what-is-b": {
+      "id": "what-is-b",
       "title": "What is B?",
-      "file": "sections/s02.md",
+      "file": "sections/what-is-b.md",
       "gif": "gifs/A-to-B.html",
       "gifCaption": "A belief at the frontier crystallises and drifts inward to become part of the stable core.",
-      "ab": "s03",
-      "u": "s02-s",
+      "ab": "what-is-u",
+      "u": "what-is-b-simpler",
       "stub": false
     },
-    "s02-s": {
-      "id": "s02-s",
+    "what-is-b-simpler": {
+      "id": "what-is-b-simpler",
       "title": "What is B? — Simpler",
-      "file": "sections/s02-s.md",
+      "file": "sections/what-is-b-simpler.md",
       "gif": null,
       "gifCaption": null,
-      "ab": "s03",
+      "ab": "what-is-u",
       "u": null,
       "stub": false
     },
-    "s03": {
-      "id": "s03",
+    "what-is-u": {
+      "id": "what-is-u",
       "title": "What is U?",
-      "file": "sections/s03.md",
+      "file": "sections/what-is-u.md",
       "gif": "gifs/U-book-and-person.html",
       "gifCaption": "Two external inputs approach the belief network — one from a book, one from a person.",
-      "ab": "s04",
-      "u": "s03-s",
+      "ab": "when-u-becomes-a",
+      "u": "what-is-u-simpler",
       "stub": false
     },
-    "s03-s": {
-      "id": "s03-s",
+    "what-is-u-simpler": {
+      "id": "what-is-u-simpler",
       "title": "What is U? — Simpler",
-      "file": "sections/s03-s.md",
+      "file": "sections/what-is-u-simpler.md",
       "gif": null,
       "gifCaption": null,
-      "ab": "s04",
+      "ab": "when-u-becomes-a",
       "u": null,
       "stub": false
     },
-    "s04": {
-      "id": "s04",
+    "when-u-becomes-a": {
+      "id": "when-u-becomes-a",
       "title": "When U becomes A",
-      "file": "sections/s04.md",
+      "file": "sections/when-u-becomes-a.md",
       "gif": "gifs/U-to-A.html",
       "gifCaption": "An external input binds to the belief network and becomes a new active belief.",
-      "ab": "s05",
-      "u": "s04-s",
+      "ab": "when-u-is-rejected",
+      "u": "when-u-becomes-a-simpler",
       "stub": false
     },
-    "s04-s": {
-      "id": "s04-s",
+    "when-u-becomes-a-simpler": {
+      "id": "when-u-becomes-a-simpler",
       "title": "When U becomes A — Simpler",
-      "file": "sections/s04-s.md",
+      "file": "sections/when-u-becomes-a-simpler.md",
       "gif": null,
       "gifCaption": null,
-      "ab": "s05",
+      "ab": "when-u-is-rejected",
       "u": null,
       "stub": false
     },
-    "s05": {
-      "id": "s05",
+    "when-u-is-rejected": {
+      "id": "when-u-is-rejected",
       "title": "When U is rejected",
-      "file": "sections/s05.md",
+      "file": "sections/when-u-is-rejected.md",
       "gif": "gifs/U-rejected.html",
       "gifCaption": "An external input approaches, fails to bind, and slowly fades away.",
-      "ab": "s06",
-      "u": "s05-s",
+      "ab": "maladaptive-b",
+      "u": "when-u-is-rejected-simpler",
       "stub": false
     },
-    "s05-s": {
-      "id": "s05-s",
+    "when-u-is-rejected-simpler": {
+      "id": "when-u-is-rejected-simpler",
       "title": "When U is rejected — Simpler",
-      "file": "sections/s05-s.md",
+      "file": "sections/when-u-is-rejected-simpler.md",
       "gif": null,
       "gifCaption": null,
-      "ab": "s06",
+      "ab": "maladaptive-b",
       "u": null,
       "stub": false
     },
-    "s06": {
-      "id": "s06",
+    "maladaptive-b": {
+      "id": "maladaptive-b",
       "title": "Maladaptive B",
-      "file": "sections/s06.md",
+      "file": "sections/maladaptive-b.md",
       "gif": "gifs/mal1-maladaptive-b-fires.html",
       "gifCaption": "A maladaptive core belief fires and blocks incoming input from landing.",
       "ab": null,
-      "u": "s06-s",
+      "u": "maladaptive-b-simpler",
       "stub": false
     },
-    "s06-s": {
-      "id": "s06-s",
+    "maladaptive-b-simpler": {
+      "id": "maladaptive-b-simpler",
       "title": "Maladaptive B — Simpler",
-      "file": "sections/s06-s.md",
+      "file": "sections/maladaptive-b-simpler.md",
       "gif": null,
       "gifCaption": null,
       "ab": null,

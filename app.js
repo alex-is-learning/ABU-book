@@ -26,7 +26,7 @@ async function boot() {
   // Append any sections not in the chain and not simpler variants
   const chainSet = new Set(orderedIds);
   Object.keys(content.sections).forEach(id => {
-    if (!id.endsWith('-s') && !chainSet.has(id)) {
+    if (!id.endsWith('-simpler') && !chainSet.has(id)) {
       orderedIds.push(id);
     }
   });
